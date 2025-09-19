@@ -5,75 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自己紹介 - 田中太郎</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-        .gradient-bg {
-            background: #ffffff;
-        }
-        .section-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-        }
-        .tech-tag {
-            background: linear-gradient(45deg, #3b82f6, #1d4ed8);
-            transition: all 0.3s ease;
-        }
-        .tech-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-        .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.5rem;
-            width: 12px;
-            height: 12px;
-            background: #3b82f6;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px #3b82f6;
-        }
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 1.5rem;
-            width: 2px;
-            height: calc(100% - 1rem);
-            background: linear-gradient(to bottom, #3b82f6, transparent);
-        }
-        .timeline-item:last-child::after {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen gradient-bg">
-    <!-- ヘッダー: アイコン・名前 -->
     <header class="text-center py-16 px-4">
+        
         <div class="max-w-4xl mx-auto">
-            <!-- プロフィール画像 -->
-            <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white shadow-2xl flex items-center justify-center">
-                <svg class="w-20 h-20 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                </svg>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">田中 太郎</h1>
-            <p class="text-xl text-gray-600 font-light">Web Developer & Designer</p>
+<div class="w-32 h-32 mx-auto mb-6 rounded-full bg-white shadow-2xl overflow-hidden">
+    <img src="HomePage.JPG" alt="プロフィール写真" class="w-full h-full object-cover">
+</div>
+
+
+            <h1 id="user-name" class="text-4xl md:text-5xl font-bold text-gray-800 mb-4"></h1>
+            <p id="user-job" class="text-xl text-gray-600 font-light"></p>
         </div>
     </header>
 
-    <!-- メインコンテンツ -->
+    
     <main class="max-w-4xl mx-auto px-4 pb-16 space-y-12">
-        
-        <!-- 将来の夢 -->
+
+                <!-- なりたい将来像 -->
+        <section>
+            <div class="text-center">
+                <p id="future-vision" class="text-gray-800 leading-relaxed text-3xl font-bold">
+                </p>
+            </div>
+        </section>
         <section class="section-card rounded-2xl p-8 shadow-xl">
             <div class="flex items-center mb-6">
                 <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -84,12 +41,9 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-800">将来の夢</h2>
             </div>
             <div class="w-16 h-1 bg-blue-600 mb-6"></div>
-            <p class="text-gray-700 leading-relaxed text-lg">
-                世界中の人々が使いやすいWebアプリケーションを開発し、テクノロジーの力で社会課題を解決することが私の夢です。特に教育分野でのデジタル格差をなくし、誰もが平等に学習機会を得られるプラットフォームを作りたいと考えています。
-            </p>
+            <p id="future-dream" class="text-gray-700 leading-relaxed text-lg"></p>
         </section>
 
-        <!-- 勉強する理由 -->
         <section class="section-card rounded-2xl p-8 shadow-xl">
             <div class="flex items-center mb-6">
                 <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -100,12 +54,9 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-800">勉強する理由</h2>
             </div>
             <div class="w-16 h-1 bg-blue-600 mb-6"></div>
-            <p class="text-gray-700 leading-relaxed text-lg">
-                技術の進歩は日進月歩であり、常に新しい知識とスキルを身につけることが重要だと考えています。また、ユーザーのニーズも多様化しているため、幅広い技術を習得することで、より良いソリューションを提供できると信じています。学び続けることで、自分自身の成長と社会への貢献を両立させたいです。
-            </p>
+            <p id="study-reason" class="text-gray-700 leading-relaxed text-lg"></p>
         </section>
 
-        <!-- 勉強した技術 -->
         <section class="section-card rounded-2xl p-8 shadow-xl">
             <div class="flex items-center mb-6">
                 <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -116,51 +67,25 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-800">勉強した技術</h2>
             </div>
             <div class="w-16 h-1 bg-blue-600 mb-6"></div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- フロントエンド -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 mb-3">フロントエンド</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">HTML5</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">CSS3</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">React</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Vue.js</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Tailwind CSS</span>
-                    </div>
+                    <div id="frontend-skills" class="flex flex-wrap gap-2"></div>
                 </div>
-                
-                <!-- バックエンド -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 mb-3">バックエンド</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Python</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Express.js</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
-                    </div>
+                    <div id="backend-skills" class="flex flex-wrap gap-2"></div>
                 </div>
-                
-                <!-- ツール・その他 -->
                 <div class="md:col-span-2">
                     <h3 class="text-lg font-semibold text-gray-800 mb-3">ツール・その他</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Git</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Docker</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">AWS</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Figma</span>
-                        <span class="tech-tag text-white px-3 py-1 rounded-full text-sm font-medium">Adobe XD</span>
-                    </div>
+                    <div id="tools-skills" class="flex flex-wrap gap-2"></div>
                 </div>
             </div>
         </section>
 
-        <!-- 略歴 -->
         <section class="section-card rounded-2xl p-8 shadow-xl">
             <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                 <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
@@ -168,42 +93,9 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-800">略歴</h2>
             </div>
             <div class="w-16 h-1 bg-blue-600 mb-6"></div>
-            
-            <div class="space-y-6">
-                <div class="timeline-item">
-                    <div class="bg-blue-50 rounded-lg p-4">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                            <h3 class="text-lg font-semibold text-gray-800">○○大学 情報工学部</h3>
-                            <span class="text-blue-600 font-medium">2020年4月 - 2024年3月</span>
-                        </div>
-                        <p class="text-gray-600">コンピュータサイエンスの基礎を学び、プログラミングとシステム設計の知識を習得</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="bg-blue-50 rounded-lg p-4">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                            <h3 class="text-lg font-semibold text-gray-800">株式会社△△ インターンシップ</h3>
-                            <span class="text-blue-600 font-medium">2023年8月 - 2023年9月</span>
-                        </div>
-                        <p class="text-gray-600">Webアプリケーション開発チームでフロントエンド開発を担当</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="bg-blue-50 rounded-lg p-4">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                            <h3 class="text-lg font-semibold text-gray-800">個人プロジェクト開始</h3>
-                            <span class="text-blue-600 font-medium">2023年10月 - 現在</span>
-                        </div>
-                        <p class="text-gray-600">学習管理システムの開発を開始し、React + Node.jsでフルスタック開発を実践</p>
-                    </div>
-                </div>
-            </div>
+            <div id="timeline" class="space-y-6"></div>
         </section>
-    </main>
 
-        <!-- お問い合わせ -->
         <section class="section-card rounded-2xl p-8 shadow-xl">
             <div class="flex items-center mb-6">
                 <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -214,72 +106,30 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-800">お問い合わせ</h2>
             </div>
             <div class="w-16 h-1 bg-blue-600 mb-6"></div>
-            
             <div class="text-center mb-8">
                 <p class="text-gray-700 text-lg mb-6">
                     ご質問やお仕事のご相談がございましたら、お気軽にお声がけください。
                 </p>
-                <a href="mailto:contact@example.com" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                <a id="contact-email" href="" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
                     メールでお問い合わせ
                 </a>
             </div>
-            
-            <!-- SNSリンク -->
             <div class="border-t border-gray-200 pt-8">
                 <h3 class="text-lg font-semibold text-gray-800 text-center mb-6">SNS・技術ブログ</h3>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <!-- Twitter -->
-                    <a href="https://twitter.com/your_username" target="_blank" rel="noopener noreferrer" class="flex items-center bg-blue-400 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                        </svg>
-                        Twitter
-                    </a>
-                    
-                    <!-- GitHub -->
-                    <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    
-                    <!-- Zenn -->
-                    <a href="https://zenn.dev/your_username" target="_blank" rel="noopener noreferrer" class="flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M.264 23.771h4.984c.264 0 .498-.147.615-.381L19.22.874c.176-.352-.074-.874-.615-.874h-4.984c-.264 0-.498.147-.615.381L-.37 23.247c-.176.352.074.524.634.524z"/>
-                        </svg>
-                        Zenn
-                    </a>
-                    
-                    <!-- Qiita -->
-                    <a href="https://qiita.com/your_username" target="_blank" rel="noopener noreferrer" class="flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M3.57 8.343a3.653 3.653 0 0 1 1.49-2.990 3.57 3.57 0 0 1 3.06-.674 3.653 3.653 0 0 1 2.99 1.49l.19.28c.28.41.14.97-.28 1.25-.41.28-.97.14-1.25-.28l-.19-.28a1.833 1.833 0 0 0-1.06-.53c-.42-.08-.85.02-1.19.26-.34.24-.58.6-.66 1.02-.08.42.02.85.26 1.19.24.34.6.58 1.02.66.42.08.85-.02 1.19-.26.34-.24.58-.6.66-1.02.08-.42-.02-.85-.26-1.19l-.28-.19c-.41-.28-.52-.84-.24-1.25.28-.41.84-.52 1.25-.24l.28.19c.41.28.52.84.24 1.25-.28.41-.84.52-1.25.24l-.19-.28a3.653 3.653 0 0 1-1.49 2.99 3.57 3.57 0 0 1-3.06.674 3.653 3.653 0 0 1-2.99-1.49 3.57 3.57 0 0 1-.674-3.06zm16.86 0a3.653 3.653 0 0 0-1.49-2.99 3.57 3.57 0 0 0-3.06-.674 3.653 3.653 0 0 0-2.99 1.49l-.19.28c-.28.41-.14.97.28 1.25.41.28.97.14 1.25-.28l.19-.28c.24-.34.6-.58 1.02-.66.42-.08.85.02 1.19.26.34.24.58.6.66 1.02.08.42-.02.85-.26 1.19-.24.34-.6.58-1.02.66-.42.08-.85-.02-1.19-.26-.34-.24-.58-.6-.66-1.02-.08-.42.02-.85.26-1.19l.28-.19c.41-.28.52-.84.24-1.25-.28-.41-.84-.52-1.25-.24l-.28.19c-.41.28-.52.84-.24 1.25.28.41.84.52 1.25.24l.19-.28a3.653 3.653 0 0 0 1.49 2.99 3.57 3.57 0 0 0 3.06.674 3.653 3.653 0 0 0 2.99-1.49 3.57 3.57 0 0 0 .674-3.06z"/>
-                        </svg>
-                        Qiita
-                    </a>
-                    
-                    <!-- Note -->
-                    <a href="https://note.com/your_username" target="_blank" rel="noopener noreferrer" class="flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 3v18l8-6V3H8z"/>
-                        </svg>
-                        Note
-                    </a>
-                </div>
+                <div id="social-links" class="flex flex-wrap justify-center gap-4"></div>
             </div>
         </section>
     </main>
 
-    <!-- フッター -->
     <footer class="text-center py-8 px-4">
         <div class="max-w-4xl mx-auto">
-            <p class="text-gray-600 text-sm">© 2024 田中太郎. All rights reserved.</p>
+            <p id="footer-text" class="text-gray-600 text-sm"></p>
         </div>
     </footer>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9812337dd047d3dd',t:'MTc1ODIxMjc0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+    <script src="script.js"></script>
+</body>
 </html>
