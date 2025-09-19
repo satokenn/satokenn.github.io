@@ -36,6 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 skillsTools.appendChild(tag);
             });
 
+            // ブログリンクの生成
+            const blogLinks = document.getElementById('blog-links');
+            data.blogs.forEach(blog => {
+                const link = document.createElement('a');
+                link.href = blog.url;
+                link.target = '_blank';
+                link.className = `inline-flex items-center px-4 py-2 rounded-lg text-white font-medium transition-colors duration-300 ${blog.class}`;
+                link.innerHTML = `${blog.icon}${blog.name}`;
+                blogLinks.appendChild(link);
+            });
+
             // 略歴の生成
             const timeline = document.getElementById('timeline');
             data.timeline.forEach(item => {
