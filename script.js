@@ -38,14 +38,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // ブログリンクの生成
             const blogLinks = document.getElementById('blog-links');
-            data.blogs.forEach(blog => {
-                const link = document.createElement('a');
-                link.href = blog.url;
-                link.target = '_blank';
-                link.className = `inline-flex items-center px-4 py-2 rounded-lg text-white font-medium transition-colors duration-300 ${blog.class}`;
-                link.innerHTML = `${blog.icon}${blog.name}`;
-                blogLinks.appendChild(link);
-            });
+            console.log('Blog links element:', blogLinks);
+            console.log('Blogs data:', data.blogs);
+            
+            if (blogLinks && data.blogs && Array.isArray(data.blogs)) {
+                data.blogs.forEach((blog, index) => {
+                    console.log(`Creating blog link ${index}:`, blog);
+                    const link = document.createElement('a');
+                    link.href = blog.url;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.className = `inline-flex items-center px-4 py-2 rounded-lg text-white font-medium transition-colors duration-300 ${blog.class}`;
+                    link.innerHTML = `${blog.icon}${blog.name}`;
+                    blogLinks.appendChild(link);
+                });
+                console.log('Blog links created successfully');
+            } else {
+                console.error('Blog links element not found or blogs data is invalid');
+            }
 
             // 略歴の生成
             const timeline = document.getElementById('timeline');
