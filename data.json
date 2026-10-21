@@ -44,18 +44,23 @@
     },
     {
       "title": "KUTPG代表",
-      "period": "2023年10月 - 現在",
+      "period": "2023年10月 - 2025年10月",
       "description": "競技プログラミングサークル代表として健全な組織運営を実施"
     },
     {
       "title": "SecHack365 採択",
-      "period":"2025年6月 - 現在",
+      "period":"2025年6月 - 2026年3月",
       "description": "表現駆動としてプロダクトの作り方やチーム開発の方法を勉強"
     },
     {
       "title": "Engineer Guild Hackathon参加",
       "period": "2025年9月",
       "description": "友人とバックエンド制作を担当"
+    },
+    {
+      "title": "マスタリングTCP/IP輪講会主催",
+      "period": "2025年10月 - 現在",
+      "description": "ネットワークの知識を体系的に学ぶ"
     }
   ],
   "contact": {
